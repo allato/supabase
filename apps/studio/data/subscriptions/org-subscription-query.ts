@@ -1,7 +1,9 @@
 import { useQuery, UseQueryOptions } from '@tanstack/react-query'
+
 import { get } from 'data/fetchers'
-import { subscriptionKeys } from './keys'
+import { IS_PLATFORM } from 'lib/constants'
 import type { ResponseError } from 'types'
+import { subscriptionKeys } from './keys'
 
 export type OrgSubscriptionVariables = {
   orgSlug?: string
@@ -36,7 +38,7 @@ export const useOrgSubscriptionQuery = <TData = OrgSubscriptionData>(
     subscriptionKeys.orgSubscription(orgSlug),
     ({ signal }) => getOrgSubscription({ orgSlug }, signal),
     {
-      enabled: enabled && typeof orgSlug !== 'undefined',
+      enabled: enabled && typeof orgSlug !== 'undefined' && IS_PLATFORM,
       ...options,
     }
   )

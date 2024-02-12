@@ -5,6 +5,7 @@ import { API_URL } from 'lib/constants'
 import type { ResponseError } from 'types'
 import type { Integration, IntegrationsVariables } from './integrations.types'
 import { integrationKeys } from './keys'
+import { IS_PLATFORM } from 'common'
 
 export type IntegrationsResponse = Integration[]
 
@@ -33,5 +34,5 @@ export const useOrgIntegrationsQuery = <TData = IntegrationsData>(
   useQuery<IntegrationsData, IntegrationsError, TData>(
     integrationKeys.integrationsListWithOrg(orgSlug),
     ({ signal }) => getIntegrations({ orgSlug }, signal),
-    { enabled: enabled && typeof orgSlug !== 'undefined', ...options }
+    { enabled: enabled && typeof orgSlug !== 'undefined' && IS_PLATFORM, ...options }
   )
