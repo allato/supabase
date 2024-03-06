@@ -81,6 +81,9 @@ export * from './src/components/ThemeProvider/prefixedThemes'
 
 // shadcn
 export * from './src/components/shadcn/ui/dropdown-menu'
+export * from './src/components/shadcn/ui/use-toast'
+export * from './src/components/shadcn/ui/toast'
+export * from './src/components/shadcn/ui/toaster'
 
 export {
   Command as Command_Shadcn_,
@@ -104,6 +107,7 @@ export {
   DialogTitle as DialogTitle_Shadcn_,
   DialogDescription as DialogDescription_Shadcn_,
   DialogSection as DialogSection_Shadcn_,
+  DialogSectionSeparator as DialogSectionSeparator_Shadcn_,
   DIALOG_PADDING_X as DIALOG_PADDING_X_Shadcn_,
   DIALOG_PADDING_Y as DIALOG_PADDING_Y_Shadcn_,
 } from './src/components/shadcn/ui/dialog'
@@ -171,6 +175,8 @@ export { Checkbox as Checkbox_Shadcn_ } from './src/components/shadcn/ui/checkbo
 
 export * from './src/components/shadcn/ui/scroll-area'
 
+export * from './src/components/shadcn/ui/hover-card'
+
 export {
   Collapsible as Collapsible_Shadcn_,
   CollapsibleTrigger as CollapsibleTrigger_Shadcn_,
@@ -202,9 +208,19 @@ export {
   TooltipContent as TooltipContent_Shadcn_,
 } from './src/components/shadcn/ui/tooltip'
 
+export {
+  HoverCard as HoverCard_Shadcn_,
+  HoverCardTrigger as HoverCardTrigger_Shadcn_,
+  HoverCardContent as HoverCardContent_Shadcn_,
+} from './src/components/shadcn/ui/hover-card'
+
+export { Toggle as Toggle_Shadcn } from './src/components/shadcn/ui/toggle'
+
 export { ScrollArea, ScrollBar } from './src/components/shadcn/ui/scroll-area'
 
 export { Separator } from './src/components/shadcn/ui/separator'
+
+export * from './src/components/shadcn/ui/resizable'
 
 // links
 
